@@ -1,8 +1,8 @@
-# 🎈 Blank app template
+# 🎈 Dr Know
 
-A simple Streamlit app template for you to modify!
+It is a web app that leverages [streamlit](https://streamlit.io/cloud) and [Google Gemini](https://aistudio.google.com/) to make high level health diagnostics in the convience of your home.  It is not a replace for a doctor.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://spanaapp.streamlit.app/)
 
 ### How to run it on your own machine
 
@@ -15,5 +15,4 @@ A simple Streamlit app template for you to modify!
 2. Run the app
 
    ```
-   $ streamlit run streamlit_app.py
-   ```
+   $ streamlit run About.py
