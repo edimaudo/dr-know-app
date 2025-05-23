@@ -25,16 +25,16 @@ with st.sidebar:
 
 with st.container():
     st.subheader("Do you have any known Allergies?")
-    allergies_txt = st.text_area(label=" ",value="",placeholder='',key=1)
+    allergies_txt = st.text_area(label=" ",value="",placeholder=None,key=1)
 
     st.subheader("Are you taking any medication? If yes list them")
-    medication_txt = st.text_area(label=" ",value="",placeholder='',key=2)
+    medication_txt = st.text_area(label=" ",value="",placeholder=None,key=2)
 
     st.subheader("Have you had any past surgeries or hospitalizations?")
-    surgery_txt = st.text_area(label=" ",value="",placeholder='',key=3)
+    surgery_txt = st.text_area(label=" ",value="",placeholder=None,key=3)
 
     st.subheader("What symptoms or concerns are you experiencing?")
-    symptom_txt = st.text_area(label=" ",value="",placeholder='No issues',key=4)
+    symptom_txt = st.text_area(label=" ",value="",placeholder=None,key=4)
 
     health_button = st.button("Get Inisghts", type="primary")
 
@@ -50,7 +50,7 @@ with st.container():
             ". The person's medical background is: " + str(medical_background_selection) + 
             ". The person has these allergies: " + str(allergies_txt) + 
             ". The person is taking these type of medication: " + str(medication_txt) + 
-            ". The person has person's surgical history is: " + str(surgery_txt_txt) + 
+            ". The person has person's surgical history is: " + str(surgery_txt) + 
             ". The person has these symptoms: " + str(symptom_txt) + 
             "based on this information, provide the top 5 potential diagonsis with a percentage and order in descending order."
         )
