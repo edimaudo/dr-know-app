@@ -34,7 +34,7 @@ with st.container():
     surgery_txt = st.text_area(label=" ",value="",placeholder='',key=3)
 
     st.subheader("What symptoms or concerns are you experiencing?")
-    symptom_txt = st.text_area(label=" ",value="",placeholder='',key=4)
+    symptom_txt = st.text_area(label=" ",value="",placeholder='No issues',key=4)
 
     health_button = st.button("Get Inisghts", type="primary")
 
@@ -42,7 +42,18 @@ with st.container():
         st.html("<p> </p>")
         st.subheader("Diagnosis")
 
-        prompt_input = ""
+        prompt_input = (
+            "A " + str(gender_selection) + 
+            " that is in the age range " + str(age_selection) + 
+            " who is " + str(marital_selection) + 
+            ". The person has these health behaviours: " + str(health_behaviour_selection) +
+            ". The person's medical background is: " + str(medical_background_selection) + 
+            ". The person has these allergies: " + str(allergies_txt) + 
+            ". The person is taking these type of medication: " + str(medication_txt) + 
+            ". The person has person's surgical history is: " + str(surgery_txt_txt) + 
+            ". The person has these symptoms: " + str(symptom_txt) + 
+            "based on this information, provide the top 5 potential diagonsis with a percentage and order in descending order."
+        )
         
         response = config.client.models.generate_content(
         model="gemini-2.0-flash",
